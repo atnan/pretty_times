@@ -1,0 +1,18 @@
+PrettyTimes
+===========
+
+This is a simple plugin which adds human formatted date attributes to your
+models so that the attributes can be serialised as JSON/XML easily.
+
+
+Example
+=======
+
+class Post < ActiveRecord::Base
+  pretty_times :created_at, :updated_at
+end
+
+Post.first.created_at_in_words
+=> "4 days ago"
+
+Copyright (c) 2008 Nathan de Vries (http://www.atnan.com), released under the MIT license
